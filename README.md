@@ -103,6 +103,8 @@ The primary objective is to build a **robust, mini-classification pipeline** tha
 ```bash
 pip install -r requirements.txt
 
+## 🚀 Steps to Run
+
 ### 2️⃣ Train the Model
 ```bash
 python src/model_training.py
@@ -115,32 +117,39 @@ python src/inference_script.py
 ```bash
 python src/simulation.py
 
-### Simulation results will be stored in:
+### 🗂 Simulation results will be stored in:
 ```bash
 results/simulation_results.csv
 
-## 📑 7. Reports
+## 📑 7. Reports  
+
 - **performance_report.md** → Contains detailed model evaluation  
 - **simulation_results.csv** → Logs all predictions during conveyor simulation  
 
 ---
 
-## 🏆 8. Key Highlights
+## 🏆 8. Key Highlights  
+
 - End-to-end ML pipeline from **data → training → deployment → simulation**  
-- **Lightweight ResNet18 model** with transfer learning  
-- **ONNX deployment** for real-time performance  
-- **Modular code structure** for easy extension  
+- Lightweight **ResNet18** model with transfer learning  
+- **ONNX** deployment for real-time performance  
+- Modular code structure for easy extension  
 
 ---
 
-## 🔮 Future Work
+## 🔮 Future Work  
+
 - Expand dataset with more scrap categories  
 - Integrate **object detection** (instead of classification)  
-- Deploy model to an **edge device (Jetson Nano / Raspberry Pi)**  
+- Deploy model to an **edge device** (Jetson Nano / Raspberry Pi)  
 - Optimize pipeline with **quantization / pruning**  
 
 ---
 
-## 👨‍💻 Author
-- **PRATEEK**  
-- 📅 **Project:** Scrap Simulation Challenge  
+## 👨‍💻 Author  
+
+**PRATEEK**  
+
+📅 **Project:** Scrap Simulation Challenge  
+
+
