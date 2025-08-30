@@ -1,21 +1,35 @@
-# 🏭 Scrap Simulation Challenge – End-to-End ML Pipeline for Real-Time Material Classification
+# 🏭 Scrap Simulation Challenge  
+_End-to-End ML Pipeline for Real-Time Scrap Material Classification_  
 
-This project implements an **end-to-end machine learning pipeline** to classify scrap materials from image data, simulating a **real-time scrap sorting conveyor**.  
-It demonstrates proficiency in **data processing, model development, deployment, and documentation**.
-
----
-
-## 📌 1. Project Objective
-The primary objective is to build a **robust, mini-classification pipeline** that:
-- Trains on image data of different scrap materials  
-- Deploys a **lightweight model** for inference  
-- Simulates a **real-time scrap sorting system**  
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)  
+![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-red?logo=pytorch)  
+![ONNX](https://img.shields.io/badge/ONNX-Ready-green?logo=onnx)  
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)  
+![License](https://img.shields.io/badge/License-MIT-yellow)  
 
 ---
 
-## 📂 2. Project Deliverables & Folder Structure
-## 📂 Project Structure
+## 📌 Overview  
 
+This project demonstrates an **end-to-end machine learning pipeline** that classifies scrap materials from image data and simulates a **real-time conveyor-based sorting system**.  
+
+It showcases:  
+- 🔹 Data processing & augmentation  
+- 🔹 Model training with **ResNet18** (transfer learning)  
+- 🔹 Deployment using **ONNX** for fast inference  
+- 🔹 Real-time conveyor **simulation with logging**  
+
+---
+
+## 🎯 Objectives  
+
+- Build a robust ML pipeline for **scrap material classification**  
+- Enable **real-time inference** with ONNX  
+- Simulate conveyor sorting with **live predictions**  
+
+---
+
+## 📂 Project Structure  
 ```bash
 .
 ├── .vscode/                   # VS Code-specific configurations
@@ -40,116 +54,46 @@ The primary objective is to build a **robust, mini-classification pipeline** tha
 
 ---
 
-## 📊 3. Dataset
-- Dataset inspired by **TrashNet**  
-- Contains at least **5 classes of scrap materials**:  
-  - Cardboard  
-  - Glass  
-  - Metal  
-  - Paper  
-  - Plastic  
+## 📊 Dataset  
 
-✅ Pre-labeled structure makes training easier.  
-✅ Direct relevance to real-world recycling scenarios.  
+Inspired by **TrashNet**, with **5 classes** of scrap materials:  
+- 🟫 Cardboard  
+- 🟦 Glass  
+- ⚙️ Metal  
+- 📄 Paper  
+- 🟧 Plastic  
 
----
-
-## 🧠 4. Model Architecture & Training
-
-### 🔹 Architecture
-- Base model: **ResNet18 (CNN)**
-- Chosen for its **balance of accuracy and efficiency**
-- Lightweight enough for **real-time deployment**
-
-### 🔹 Training Process
-1. **Preprocessing**  
-   - Images resized to `224x224`  
-   - Normalized pixel values  
-
-2. **Data Augmentation**  
-   - Random horizontal flip  
-   - Color jitter  
-   - Boosts generalization  
-
-3. **Transfer Learning**  
-   - Initialized with **ImageNet pretrained weights**  
-   - Faster convergence, less data needed  
-
-4. **Fine-tuning**  
-   - Replaced and retrained final FC layer  
-   - Convolutional base frozen  
-
-5. **Evaluation Metrics**  
-   - Accuracy  
-   - Precision & Recall  
-   - Confusion Matrix  
+✅ Pre-labeled & ready for supervised training  
+✅ Relevant for **real-world recycling automation**  
 
 ---
 
-## 🚀 5. Deployment Decisions
-- Trained model saved as **PyTorch checkpoint (`.pth`)**
-- Converted to **ONNX format** for deployment  
+## 🧠 Model Architecture & Training  
 
-**Why ONNX?**
-- ✅ **Portability** – Run across platforms & devices  
-- ✅ **Performance** – Optimized inference speed  
-- ✅ **Scalability** – Suitable for real-time conveyor simulation  
+- **Base Model:** ResNet18 (lightweight CNN)  
+- **Pretrained Weights:** ImageNet  
+- **Training Pipeline:**  
+  - Resize to `224x224`, normalize  
+  - Augmentation: horizontal flip, color jitter  
+  - Replace final FC layer → retrained on scrap classes  
+  - Metrics: Accuracy, Precision, Recall, Confusion Matrix  
 
 ---
 
-## ▶️ 6. How to Run
+## 🚀 Deployment  
 
-### 1️⃣ Install Dependencies
+- Model saved as `.pth` (PyTorch checkpoint)  
+- Converted to `.onnx` for optimized inference  
+
+**Why ONNX?**  
+✔ Portability across devices  
+✔ Faster inference for real-time sorting  
+✔ Ready for edge deployment (Jetson Nano / Raspberry Pi)  
+
+---
+
+## ▶️ Usage  
+
+### 🔹 1. Install Dependencies  
 ```bash
 pip install -r requirements.txt
-
-## 🚀 Steps to Run
-
-### 2️⃣ Train the Model
-```bash
-python src/model_training.py
-
-### 3️⃣ Convert to ONNX & Run Inference
-```bash
-python src/inference_script.py
-
-### 4️⃣ Run the Real-Time Simulation
-```bash
-python src/simulation.py
-
-### 🗂 Simulation results will be stored in:
-```bash
-results/simulation_results.csv
-
-## 📑 7. Reports  
-
-- **performance_report.md** → Contains detailed model evaluation  
-- **simulation_results.csv** → Logs all predictions during conveyor simulation  
-
----
-
-## 🏆 8. Key Highlights  
-
-- End-to-end ML pipeline from **data → training → deployment → simulation**  
-- Lightweight **ResNet18** model with transfer learning  
-- **ONNX** deployment for real-time performance  
-- Modular code structure for easy extension  
-
----
-
-## 🔮 Future Work  
-
-- Expand dataset with more scrap categories  
-- Integrate **object detection** (instead of classification)  
-- Deploy model to an **edge device** (Jetson Nano / Raspberry Pi)  
-- Optimize pipeline with **quantization / pruning**  
-
----
-
-## 👨‍💻 Author  
-
-**PRATEEK**  
-
-📅 **Project:** Scrap Simulation Challenge  
-
-
