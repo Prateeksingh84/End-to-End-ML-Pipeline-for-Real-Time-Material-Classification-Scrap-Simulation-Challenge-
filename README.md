@@ -68,11 +68,11 @@ Inspired by **TrashNet**, with **5 classes** of scrap materials:
 
 ---
 
-## 🧠 Model Architecture & Training  
+🧠 Model Architecture & Training  
 
-- **Base Model:** ResNet18 (lightweight CNN)  
-- **Pretrained Weights:** ImageNet  
-- **Training Pipeline:**  
+- Base Model: ResNet18 (lightweight CNN)  
+- Pretrained Weights: ImageNet  
+- Training Pipeline:  
   - Resize to `224x224`, normalize  
   - Augmentation: horizontal flip, color jitter  
   - Replace final FC layer → retrained on scrap classes  
@@ -80,20 +80,20 @@ Inspired by **TrashNet**, with **5 classes** of scrap materials:
 
 ---
 
-## 🚀 Deployment  
+🚀 Deployment  
 
 - Model saved as `.pth` (PyTorch checkpoint)  
 - Converted to `.onnx` for optimized inference  
 
-**Why ONNX?**  
+Why ONNX?
 ✔ Portability across devices  
 ✔ Faster inference for real-time sorting  
 ✔ Ready for edge deployment (Jetson Nano / Raspberry Pi)  
 
 ---
 
-## ▶️ Usage  
+▶️ Usage  
 
-### 🔹 1. Install Dependencies  
+🔹 1. Install Dependencies  
 ```bash
 pip install -r requirements.txt
