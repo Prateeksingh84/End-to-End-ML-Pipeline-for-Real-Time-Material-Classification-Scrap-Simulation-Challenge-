@@ -54,7 +54,7 @@ It showcases:
 
 ---
 
-## 📊 Dataset  
+📊 Dataset  
 
 Inspired by **TrashNet**, with **5 classes** of scrap materials:  
 - 🟫 Cardboard  
